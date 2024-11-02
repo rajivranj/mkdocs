@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.7 Category scheme | SDMX Constructor: User Manual</title>
+  <meta name="description" content="Instructions and information on how to use the SDMX Constructor tool" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.7 Category scheme | SDMX Constructor: User Manual" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Main.png" />
+  <meta property="og:description" content="Instructions and information on how to use the SDMX Constructor tool" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.7 Category scheme | SDMX Constructor: User Manual" />
+  
+  <meta name="twitter:description" content="Instructions and information on how to use the SDMX Constructor tool" />
+  <meta name="twitter:image" content="/Main.png" />
+
+<meta name="author" content="International Labour Organization: Department of Statistics" />
+
+
+<meta name="date" content="2023-05-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="creating-dsd.html"/>
+<link rel="next" href="uploading-xml.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><a href="./"><img src="new.png"></a></li>
+<li><a href="./">SDMX Constructor: User manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="audience-and-use-cases.html"><a href="audience-and-use-cases.html"><i class="fa fa-check"></i>Audience and use cases</a></li>
+<li class="chapter" data-level="" data-path="scope-and-assumptions.html"><a href="scope-and-assumptions.html"><i class="fa fa-check"></i>Scope and assumptions</a></li>
+<li class="chapter" data-level="" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="contact-information.html"><a href="contact-information.html"><i class="fa fa-check"></i>Contact information</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="benefits-of.html"><a href="benefits-of.html"><i class="fa fa-check"></i><b>1</b> Benefits of SDMX Constructor</a></li>
+<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="system-requirements.html"><a href="system-requirements.html"><i class="fa fa-check"></i><b>2.1</b> System requirements</a></li>
+<li class="chapter" data-level="2.2" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>2.2</b> Installation</a></li>
+<li class="chapter" data-level="2.3" data-path="software-updates.html"><a href="software-updates.html"><i class="fa fa-check"></i><b>2.3</b> Software updates</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="user-interface.html"><a href="user-interface.html"><i class="fa fa-check"></i><b>3</b> User Interface</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="general-functions-menu.html"><a href="general-functions-menu.html"><i class="fa fa-check"></i><b>3.1</b> General Functions Menu</a></li>
+<li class="chapter" data-level="3.2" data-path="editors-menu.html"><a href="editors-menu.html"><i class="fa fa-check"></i><b>3.2</b> Editors Menu</a></li>
+<li class="chapter" data-level="3.3" data-path="editor-ribbon-menu.html"><a href="editor-ribbon-menu.html"><i class="fa fa-check"></i><b>3.3</b> Editor Ribbon Menu</a></li>
+<li class="chapter" data-level="3.4" data-path="preview-and-export-menu.html"><a href="preview-and-export-menu.html"><i class="fa fa-check"></i><b>3.4</b> Preview and Export Menu</a></li>
+<li class="chapter" data-level="3.5" data-path="working-area.html"><a href="working-area.html"><i class="fa fa-check"></i><b>3.5</b> Working area</a></li>
+<li class="chapter" data-level="3.6" data-path="input-and-output-methods.html"><a href="input-and-output-methods.html"><i class="fa fa-check"></i><b>3.6</b> Input and output methods</a></li>
+<li class="chapter" data-level="3.7" data-path="translation.html"><a href="translation.html"><i class="fa fa-check"></i><b>3.7</b> Translation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="using-sdmx.html"><a href="using-sdmx.html"><i class="fa fa-check"></i><b>4</b> Using SDMX Constructor</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="accessing-sdmx.html"><a href="accessing-sdmx.html"><i class="fa fa-check"></i><b>4.1</b> Accessing SDMX artefacts from registries</a></li>
+<li class="chapter" data-level="4.2" data-path="setting-up.html"><a href="setting-up.html"><i class="fa fa-check"></i><b>4.2</b> Setting up a registry as a local folder</a></li>
+<li class="chapter" data-level="4.3" data-path="preparing-inputs.html"><a href="preparing-inputs.html"><i class="fa fa-check"></i><b>4.3</b> Preparing inputs</a></li>
+<li class="chapter" data-level="4.4" data-path="creating-agencyscheme.html"><a href="creating-agencyscheme.html"><i class="fa fa-check"></i><b>4.4</b> Creating AgencyScheme</a></li>
+<li class="chapter" data-level="4.5" data-path="creating-conceptscheme.html"><a href="creating-conceptscheme.html"><i class="fa fa-check"></i><b>4.5</b> Creating ConceptScheme &amp; Codelist</a></li>
+<li class="chapter" data-level="4.6" data-path="creating-dsd.html"><a href="creating-dsd.html"><i class="fa fa-check"></i><b>4.6</b> Creating DSD, ContentConstraint and Dataflow</a></li>
+<li class="chapter" data-level="4.7" data-path="category-scheme.html"><a href="category-scheme.html"><i class="fa fa-check"></i><b>4.7</b> Category scheme</a></li>
+<li class="chapter" data-level="4.8" data-path="uploading-xml.html"><a href="uploading-xml.html"><i class="fa fa-check"></i><b>4.8</b> Uploading XML file to the DLM</a></li>
+<li class="chapter" data-level="4.9" data-path="connecting-to.html"><a href="connecting-to.html"><i class="fa fa-check"></i><b>4.9</b> Connecting to an SDMX registry</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="special-topics.html"><a href="special-topics.html"><i class="fa fa-check"></i><b>5</b> Special Topics</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="annotations.html"><a href="annotations.html"><i class="fa fa-check"></i><b>5.1</b> Annotations</a></li>
+<li class="chapter" data-level="5.2" data-path="table-modeller.html"><a href="table-modeller.html"><i class="fa fa-check"></i><b>5.2</b> Table Modeller</a></li>
+<li class="chapter" data-level="5.3" data-path="translations-using-google-apideepl.html"><a href="translations-using-google-apideepl.html"><i class="fa fa-check"></i><b>5.3</b> Translations using Google API/DeepL</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acknowledgment.html"><a href="acknowledgment.html"><i class="fa fa-check"></i>Acknowledgment</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SDMX Constructor: User Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="category-scheme" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Category scheme<a href="category-scheme.html#category-scheme" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>A Category Scheme groups similar objects based on shared characteristics, providing a hierarchical structure that helps classify and organise data and metadata meaningfully.</p>
+<p>Referencing our two initial tables (Table: <a href="preparing-inputs.html#tab:table41">4.1</a> and Table: <a href="preparing-inputs.html#tab:table42">4.2</a>), we will create a CategoryScheme using the Table Modeller option in the SDMX Constructor. The categorisation could be by topics such as ‘Unemployment Rate’ and ‘Population outside the labour force’.</p>
+<ul>
+<li>First, we will click the CategoryScheme button and enter the properties (ID: CAS_BY_TOPIC, AgencyID: DEMOLAND_NSO, Version: 1.0 and Name: Categorisation Scheme By Topic) as shown below.</li>
+</ul>
+<p><img src="images/image160.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image160.png">Click here to enlarge the image</a></p>
+<ul>
+<li>Click on “Add New Category”, as shown below.</li>
+</ul>
+<p><img src="images/image162.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image162.png">Click here to enlarge the image</a></p>
+<ul>
+<li>It will open a pop-up window, as shown below. Enter the details: ID: UNER (shorthand for Unemployment Rate) and Name: Unemployment Rate.</li>
+</ul>
+<p><img src="images/image164.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image164.png">Click here to enlarge the image</a></p>
+<ul>
+<li>Click on the Load “Dataflows” button, as shown below.</li>
+</ul>
+<p><img src="images/image166.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image166.png">Click here to enlarge the image</a></p>
+<ul>
+<li>It will open another pop-up window to select the dataflow through the Registry.</li>
+</ul>
+<p><img src="images/image168.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image168.png">Click here to enlarge the image</a></p>
+<ul>
+<li>Select the Registry (LOCAL_REGISTRY), then the dataflow, and press Apply as shown below.</li>
+</ul>
+<p><img src="images/image170.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image170.png">Click here to enlarge the image</a></p>
+<ul>
+<li>A message will appear as shown below.</li>
+</ul>
+<p><img src="images/image172.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image172.png">Click here to enlarge the image</a></p>
+<ul>
+<li>Clicking the OK button will lead you to the following window.</li>
+</ul>
+<p><img src="images/image174.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image174.png">Click here to enlarge the image</a></p>
+<ul>
+<li>As shown below, move (dragging and dropping) the dataflow to the ‘attached dataflows’ space.</li>
+</ul>
+<p><img src="images/image176.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image176.png">Click here to enlarge the image</a></p>
+<ul>
+<li>Clicking “Apply” in that pop-up will take you to the following window, showing the entry into the CATEGORY POOL.</li>
+</ul>
+<p><img src="images/image178.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image178.png">Click here to enlarge the image</a></p>
+<ul>
+<li>Move it to the right pane, as shown below.</li>
+</ul>
+<p><img src="images/image180.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image180.png">Click here to enlarge the image</a></p>
+<ul>
+<li>Then hit Save (Save without descendants), and it will show the pop-up windows to ensure the location where it saves the file, as shown below.</li>
+</ul>
+<p><img src="images/image182.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image182.png">Click here to enlarge the image</a></p>
+<ul>
+<li>Clicking on Save will ask the confirmation to merge the file. Select Yes.</li>
+<li>Repeat the process for the other category, ‘Population outside the labour force’. The final view would be as follows:</li>
+</ul>
+<p><img src="images/image184.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image184.png">Click here to enlarge the image</a></p>
+<ul>
+<li>The XML file (by going to the location of the folder we created before and opening the XML file) would be like the one below.</li>
+</ul>
+<p><img src="images/image186.png" width="100%" style="display: block; margin: auto;" />
+<a href="images/image186.png">Click here to enlarge the image</a></p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="creating-dsd.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="uploading-xml.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rajivranj/placeholder/edit/main/04-using-sdmx-constructor.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["pdf_filename.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

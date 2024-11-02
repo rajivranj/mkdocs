@@ -1,0 +1,78 @@
+/*--- LOGO ---*/
+
+.toc-logo {
+  width: 150px !important;
+  object-fit: contain;
+  margin: 0 auto;
+  display: block;
+}       
+
+.toc-logo img {
+  max-width: 100%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.summary > li:first-child {
+  height: auto !important; 
+}
+
+
+/*--- Sidebar ---*/
+
+.book .book-summary {
+  background: #f1f6f7;
+  border-right: none;
+}
+
+.book .book-summary ul.summary li a, 
+.book .book-summary ul.summary li span {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #2f5175;
+}
+
+/* color when hovering */
+.summary a:hover {  
+  color: #1e2dbe !important;
+} 
+
+/* color for active links */
+.book .book-summary ul.summary li.active>a { /*active TOC links*/
+  color: #778ca5 !important;
+  border-left: solid 5px;
+  border-color: #1e2dbe;
+  padding-left: 11px !important;
+}  
+
+/*____Code Chunks____*/
+
+.sourceCode pre {
+  margin: 0 !important; /* makes space above and below symmetrical*/
+}
+
+.sourceCode {
+  margin-bottom: 0.85em; /* adds same amount of margin as a <p> would */
+}
+
+/*_____ Boxes _____*/
+
+.emphbox {
+  padding: 1em;
+  background: #f1f6f7;
+  color: rgb(17, 17, 17);
+  border: 2px solid rgba(216, 237, 247, 0.984)
+  border-radius: 10px;
+}
+.center {
+  text-align: center;
+}
+
+div.csl-entry {
+  clear: both;
+  margin-bottom: 15px;
+}
+
+

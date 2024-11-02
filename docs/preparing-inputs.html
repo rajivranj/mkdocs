@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>4.3 Preparing inputs | SDMX Constructor: User Manual</title>
+  <meta name="description" content="Instructions and information on how to use the SDMX Constructor tool" />
+  <meta name="generator" content="bookdown 0.32 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="4.3 Preparing inputs | SDMX Constructor: User Manual" />
+  <meta property="og:type" content="book" />
+  <meta property="og:image" content="/Main.png" />
+  <meta property="og:description" content="Instructions and information on how to use the SDMX Constructor tool" />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="4.3 Preparing inputs | SDMX Constructor: User Manual" />
+  
+  <meta name="twitter:description" content="Instructions and information on how to use the SDMX Constructor tool" />
+  <meta name="twitter:image" content="/Main.png" />
+
+<meta name="author" content="International Labour Organization: Department of Statistics" />
+
+
+<meta name="date" content="2023-05-17" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="prev" href="setting-up.html"/>
+<link rel="next" href="creating-agencyscheme.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="toc-logo"><a href="./"><img src="new.png"></a></li>
+<li><a href="./">SDMX Constructor: User manual</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Preface</a>
+<ul>
+<li class="chapter" data-level="" data-path="audience-and-use-cases.html"><a href="audience-and-use-cases.html"><i class="fa fa-check"></i>Audience and use cases</a></li>
+<li class="chapter" data-level="" data-path="scope-and-assumptions.html"><a href="scope-and-assumptions.html"><i class="fa fa-check"></i>Scope and assumptions</a></li>
+<li class="chapter" data-level="" data-path="overview.html"><a href="overview.html"><i class="fa fa-check"></i>Overview</a></li>
+<li class="chapter" data-level="" data-path="contact-information.html"><a href="contact-information.html"><i class="fa fa-check"></i>Contact information</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="benefits-of.html"><a href="benefits-of.html"><i class="fa fa-check"></i><b>1</b> Benefits of SDMX Constructor</a></li>
+<li class="chapter" data-level="2" data-path="getting-started.html"><a href="getting-started.html"><i class="fa fa-check"></i><b>2</b> Getting Started</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="system-requirements.html"><a href="system-requirements.html"><i class="fa fa-check"></i><b>2.1</b> System requirements</a></li>
+<li class="chapter" data-level="2.2" data-path="installation.html"><a href="installation.html"><i class="fa fa-check"></i><b>2.2</b> Installation</a></li>
+<li class="chapter" data-level="2.3" data-path="software-updates.html"><a href="software-updates.html"><i class="fa fa-check"></i><b>2.3</b> Software updates</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="user-interface.html"><a href="user-interface.html"><i class="fa fa-check"></i><b>3</b> User Interface</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="general-functions-menu.html"><a href="general-functions-menu.html"><i class="fa fa-check"></i><b>3.1</b> General Functions Menu</a></li>
+<li class="chapter" data-level="3.2" data-path="editors-menu.html"><a href="editors-menu.html"><i class="fa fa-check"></i><b>3.2</b> Editors Menu</a></li>
+<li class="chapter" data-level="3.3" data-path="editor-ribbon-menu.html"><a href="editor-ribbon-menu.html"><i class="fa fa-check"></i><b>3.3</b> Editor Ribbon Menu</a></li>
+<li class="chapter" data-level="3.4" data-path="preview-and-export-menu.html"><a href="preview-and-export-menu.html"><i class="fa fa-check"></i><b>3.4</b> Preview and Export Menu</a></li>
+<li class="chapter" data-level="3.5" data-path="working-area.html"><a href="working-area.html"><i class="fa fa-check"></i><b>3.5</b> Working area</a></li>
+<li class="chapter" data-level="3.6" data-path="input-and-output-methods.html"><a href="input-and-output-methods.html"><i class="fa fa-check"></i><b>3.6</b> Input and output methods</a></li>
+<li class="chapter" data-level="3.7" data-path="translation.html"><a href="translation.html"><i class="fa fa-check"></i><b>3.7</b> Translation</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="using-sdmx.html"><a href="using-sdmx.html"><i class="fa fa-check"></i><b>4</b> Using SDMX Constructor</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="accessing-sdmx.html"><a href="accessing-sdmx.html"><i class="fa fa-check"></i><b>4.1</b> Accessing SDMX artefacts from registries</a></li>
+<li class="chapter" data-level="4.2" data-path="setting-up.html"><a href="setting-up.html"><i class="fa fa-check"></i><b>4.2</b> Setting up a registry as a local folder</a></li>
+<li class="chapter" data-level="4.3" data-path="preparing-inputs.html"><a href="preparing-inputs.html"><i class="fa fa-check"></i><b>4.3</b> Preparing inputs</a></li>
+<li class="chapter" data-level="4.4" data-path="creating-agencyscheme.html"><a href="creating-agencyscheme.html"><i class="fa fa-check"></i><b>4.4</b> Creating AgencyScheme</a></li>
+<li class="chapter" data-level="4.5" data-path="creating-conceptscheme.html"><a href="creating-conceptscheme.html"><i class="fa fa-check"></i><b>4.5</b> Creating ConceptScheme &amp; Codelist</a></li>
+<li class="chapter" data-level="4.6" data-path="creating-dsd.html"><a href="creating-dsd.html"><i class="fa fa-check"></i><b>4.6</b> Creating DSD, ContentConstraint and Dataflow</a></li>
+<li class="chapter" data-level="4.7" data-path="creating-category.html"><a href="creating-category.html"><i class="fa fa-check"></i><b>4.7</b> Creating CategoryScheme</a></li>
+<li class="chapter" data-level="4.8" data-path="uploading-xml.html"><a href="uploading-xml.html"><i class="fa fa-check"></i><b>4.8</b> Uploading XML file to the DLM</a></li>
+<li class="chapter" data-level="4.9" data-path="connecting-to.html"><a href="connecting-to.html"><i class="fa fa-check"></i><b>4.9</b> Connecting to an SDMX registry</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="special-topics.html"><a href="special-topics.html"><i class="fa fa-check"></i><b>5</b> Special Topics</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="annotations.html"><a href="annotations.html"><i class="fa fa-check"></i><b>5.1</b> Annotations</a></li>
+<li class="chapter" data-level="5.2" data-path="table-modeller.html"><a href="table-modeller.html"><i class="fa fa-check"></i><b>5.2</b> Table Modeller</a></li>
+<li class="chapter" data-level="5.3" data-path="translations-using-google-apideepl.html"><a href="translations-using-google-apideepl.html"><i class="fa fa-check"></i><b>5.3</b> Translations using Google API/DeepL</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="acknowledgment.html"><a href="acknowledgment.html"><i class="fa fa-check"></i>Acknowledgment</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">SDMX Constructor: User Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="preparing-inputs" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Preparing inputs<a href="preparing-inputs.html#preparing-inputs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>To demonstrate the key functionalities of the SDMX Constructor, it is helpful to have a dummy dataset modelled appropriately.</p>
+<p>Imagine a country called Demoland and its National Statistical Office (NSO), Demoland NSO. Imagine the Demoland NSO is creating SDMX artefacts for its data in the following two tables.</p>
+<table>
+<caption><span id="tab:table41">Table 4.1: </span> Unemployment Rate by sex and region</caption>
+<colgroup>
+<col width="18%" />
+<col width="10%" />
+<col width="12%" />
+<col width="17%" />
+<col width="11%" />
+<col width="12%" />
+<col width="17%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Region</th>
+<th align="center">2015</th>
+<th align="center">2015</th>
+<th align="center">2015</th>
+<th align="center">2016</th>
+<th align="center">2016</th>
+<th align="center">2016</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="center"><strong>Men</strong></td>
+<td align="center"><strong>Women</strong></td>
+<td align="center"><strong>Both Sexes</strong></td>
+<td align="center"><strong>Men</strong></td>
+<td align="center"><strong>Women</strong></td>
+<td align="center"><strong>Both Sexes</strong></td>
+</tr>
+<tr class="even">
+<td align="left">Cities and Towns</td>
+<td align="center">14.4</td>
+<td align="center">20.7</td>
+<td align="center">17.6</td>
+<td align="center">14.4</td>
+<td align="center">21</td>
+<td align="center">17.2</td>
+</tr>
+<tr class="odd">
+<td align="left">Urban Villages</td>
+<td align="center">27.8</td>
+<td align="center">30.3</td>
+<td align="center">29.1</td>
+<td align="center">28.2</td>
+<td align="center">29.4</td>
+<td align="center">29.1</td>
+</tr>
+<tr class="even">
+<td align="left">Rural Areas</td>
+<td align="center">26.2</td>
+<td align="center">29.6</td>
+<td align="center">28</td>
+<td align="center">26.2</td>
+<td align="center">29.5</td>
+<td align="center">27.1</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="center">24</td>
+<td align="center">27.9</td>
+<td align="center">26</td>
+<td align="center">24</td>
+<td align="center">27.9</td>
+<td align="center">26</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:table42">Table 4.2: </span> Population outside the labour force by sex and age group (2022)</caption>
+<thead>
+<tr class="header">
+<th align="left">Age Group</th>
+<th align="center">Men</th>
+<th align="center">Women</th>
+<th align="center">Both Sexes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">15-24</td>
+<td align="center">130,088</td>
+<td align="center">133,770</td>
+<td align="center">263,856</td>
+</tr>
+<tr class="even">
+<td align="left">25-34</td>
+<td align="center">33,165</td>
+<td align="center">60,240</td>
+<td align="center">93,405</td>
+</tr>
+<tr class="odd">
+<td align="left">35-44</td>
+<td align="center">21,970</td>
+<td align="center">38,944</td>
+<td align="center">60,914</td>
+</tr>
+<tr class="even">
+<td align="left">45-54</td>
+<td align="center">18,631</td>
+<td align="center">36,403</td>
+<td align="center">55,034</td>
+</tr>
+<tr class="odd">
+<td align="left">55-64</td>
+<td align="center">26,821</td>
+<td align="center">44,010</td>
+<td align="center">70,831</td>
+</tr>
+<tr class="even">
+<td align="left">65+</td>
+<td align="center">45,323</td>
+<td align="center">78,725</td>
+<td align="center">124,048</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="center">275,997</td>
+<td align="center">392,092</td>
+<td align="center">668,088</td>
+</tr>
+</tbody>
+</table>
+<p>After modelling the data in both tables, we have the following ConceptScheme and Codelist arranged below. Note that the order of the columns in the following tables is per the SDMX Constructor’s bulk load default templates (ConceptScheme and Codelist).</p>
+<p><strong>ConceptScheme:</strong></p>
+<table>
+<caption><span id="tab:table43">Table 4.3: </span> ConceptScheme</caption>
+<colgroup>
+<col width="12%" />
+<col width="16%" />
+<col width="58%" />
+<col width="12%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Concept ID</th>
+<th align="left">Concept Name</th>
+<th align="left">Description</th>
+<th align="left">Codelist ID</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">INDICATOR</td>
+<td align="left">Indicator</td>
+<td align="left">Refers to statistical measure describing a particular aspect of a social, economic or environmental phenomenon</td>
+<td align="left">CL_INDICATOR</td>
+</tr>
+<tr class="even">
+<td align="left">UNIT_MEASURE</td>
+<td align="left">Unit of measure</td>
+<td align="left">Unit in which the observation values are expressed</td>
+<td align="left">CL_UNIT_MEASURE</td>
+</tr>
+<tr class="odd">
+<td align="left">SEX</td>
+<td align="left">Sex</td>
+<td align="left">State of being male or female</td>
+<td align="left">CL_SEX</td>
+</tr>
+<tr class="even">
+<td align="left">GEO</td>
+<td align="left">Geographic area</td>
+<td align="left">Refers to Urban or Rural locations</td>
+<td align="left">CL_GEO</td>
+</tr>
+<tr class="odd">
+<td align="left">TIME_PERIOD</td>
+<td align="left">Time period</td>
+<td align="left">Timespan or point in time to which the observation refers</td>
+<td align="left">CL_TIME_PERIOD</td>
+</tr>
+<tr class="even">
+<td align="left">FREQ</td>
+<td align="left">Frequency</td>
+<td align="left">Time interval at which observations occur over a given time period</td>
+<td align="left">CL_FREQ</td>
+</tr>
+<tr class="odd">
+<td align="left">AGE</td>
+<td align="left">Age groups</td>
+<td align="left">Length of time that an entity has lived or existed</td>
+<td align="left">CL_AGE</td>
+</tr>
+<tr class="even">
+<td align="left">OBS_VALUE</td>
+<td align="left">Observation values</td>
+<td align="left">Refers to data or observation values</td>
+<td align="left">CL_OBS_VALUE</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Codelist:</strong></p>
+<table>
+<caption><span id="tab:table44">Table 4.4: </span> Codelist</caption>
+<colgroup>
+<col width="16%" />
+<col width="21%" />
+<col width="10%" />
+<col width="51%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Codelist ID</th>
+<th align="left">Concept Name</th>
+<th align="left">Code ID</th>
+<th align="left">Code Name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">CL_INDICATOR</td>
+<td align="left">Indicator</td>
+<td align="left">UNER</td>
+<td align="left">Unemployment Rate</td>
+</tr>
+<tr class="even">
+<td align="left">CL_INDICATOR</td>
+<td align="left">Indicator</td>
+<td align="left">POLF</td>
+<td align="left">Population outside the labour force</td>
+</tr>
+<tr class="odd">
+<td align="left">CL_UNIT_MEASURE</td>
+<td align="left">Unit of measure</td>
+<td align="left">RT</td>
+<td align="left">Rate</td>
+</tr>
+<tr class="even">
+<td align="left">CL_UNIT_MEASURE</td>
+<td align="left">Unit of measure</td>
+<td align="left">PS</td>
+<td align="left">Persons</td>
+</tr>
+<tr class="odd">
+<td align="left">CL_SEX</td>
+<td align="left">Sex</td>
+<td align="left">M</td>
+<td align="left">Men</td>
+</tr>
+<tr class="even">
+<td align="left">CL_SEX</td>
+<td align="left">Sex</td>
+<td align="left">F</td>
+<td align="left">Women</td>
+</tr>
+<tr class="odd">
+<td align="left">CL_SEX</td>
+<td align="left">Sex</td>
+<td align="left">_T</td>
+<td align="left">Both Sexes (Total)</td>
+</tr>
+<tr class="even">
+<td align="left">CL_GEO</td>
+<td align="left">Geographical area</td>
+<td align="left">M</td>
+<td align="left">Cities and Towns (Metropolitan Area)</td>
+</tr>
+<tr class="odd">
+<td align="left">CL_GEO</td>
+<td align="left">Geographical area</td>
+<td align="left">U</td>
+<td align="left">Urban Villages</td>
+</tr>
+<tr class="even">
+<td align="left">CL_GEO</td>
+<td align="left">Geographical area</td>
+<td align="left">R</td>
+<td align="left">Rural Areas</td>
+</tr>
+<tr class="odd">
+<td align="left">CL_GEO</td>
+<td align="left">Geographical area</td>
+<td align="left">_T</td>
+<td align="left">Total</td>
+</tr>
+<tr class="even">
+<td align="left">CL_FREQ</td>
+<td align="left">Frequency</td>
+<td align="left">A</td>
+<td align="left">Annual</td>
+</tr>
+<tr class="odd">
+<td align="left">CL_AGE</td>
+<td align="left">Age groups</td>
+<td align="left">15T24</td>
+<td align="left">15-24</td>
+</tr>
+<tr class="even">
+<td align="left">CL_AGE</td>
+<td align="left">Age groups</td>
+<td align="left">25T34</td>
+<td align="left">25-34</td>
+</tr>
+<tr class="odd">
+<td align="left">CL_AGE</td>
+<td align="left">Age groups</td>
+<td align="left">35T44</td>
+<td align="left">35-44</td>
+</tr>
+<tr class="even">
+<td align="left">CL_AGE</td>
+<td align="left">Age groups</td>
+<td align="left">45T54</td>
+<td align="left">45-54</td>
+</tr>
+<tr class="odd">
+<td align="left">CL_AGE</td>
+<td align="left">Age groups</td>
+<td align="left">55T64</td>
+<td align="left">55-64</td>
+</tr>
+<tr class="even">
+<td align="left">CL_AGE</td>
+<td align="left">Age groups</td>
+<td align="left">GE65</td>
+<td align="left">65+</td>
+</tr>
+<tr class="odd">
+<td align="left">CL_AGE</td>
+<td align="left">Age groups</td>
+<td align="left">_T</td>
+<td align="left">Total</td>
+</tr>
+</tbody>
+</table>
+<p>We will use these dummy datasets in this user manual to illustrate some critical functionalities of SDMX Constructor.</p>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="setting-up.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="creating-agencyscheme.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/rajivranj/placeholder/edit/main/04-using-sdmx-constructor.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["pdf_filename.pdf"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

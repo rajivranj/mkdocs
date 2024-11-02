@@ -1,0 +1,815 @@
+# Using SDMX Constructor {#using-sdmx}
+
+Welcome to the chapter on using SDMX Constructor! This chapter will cover three key topics that will help you make the most of this powerful tool.
+
+The first topic we will cover is how to use SDMX Constructor to access SDMX artefacts from SDMX registries. This will include step-by-step instructions on how to use the tool to connect to a registry, browse its contents, and download the artefacts you need.
+
+Next, we will dive into how to use SDMX Constructor to create new SDMX artefacts from scratch. Whether you need to create a new ConceptScheme, code list or DSD, SDMX Constructor provides a simple and intuitive interface to help you get the job done.
+
+Finally, we will explore how to use SDMX Constructor to work with .Stat Suite. This powerful platform is designed to help you analyse, visualise, and disseminate statistical data, and SDMX Constructor is the perfect complement to help you access and work with the SDMX artefacts you need.
+
+By the end of this chapter, you will have a solid understanding of how to use SDMX Constructor to access, create, and work with SDMX artefacts, and you will be well on your way to becoming an expert in this powerful tool. So, let's get started!
+
+## Accessing SDMX artefacts from registries {#accessing-sdmx}
+
+In this section, we will walk you through the process of using SDMX Constructor on your computer to access and view the SDMX artefacts from the SDMX registries. This will enable you to easily browse and download the artefacts you need, for example, from the default registries already available in the SDMX Constructor.
+
+**Default SDMX registries**
+
+You can use the SDMX Constructor on your computer to access and view the SDMX artefacts from the SDMX registries. By default, SDMX Constructor offers the following registries to access SDMX artefacts: SDMX Global Registry: (<https://registry.sdmx.org/>), United Nations Statistics Division (UNSD): (<https://data.un.org/WS>), the Italian National Institute of Statistics (ESTAT) and the ILO Department of Statistics (ILOSTAT): (<https://www.ilo.org/sdmx/index.html>). You can view these by going to the Registry button and opening the Registry Name dropdown in the SDMX Registry tab, as shown below.
+
+```{r 044, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image044.png")
+```
+[Click here to enlarge the image](images/image044.png)
+
+As shown below, select a registry from the dropdown option to load the artefacts.
+
+```{r 046, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image046.png")
+```
+[Click here to enlarge the image](images/image046.png)
+
+## Setting up a registry as a local folder {#setting-up}
+
+You can use the SDMX Constructor to create SDMX artefacts on your computer without a complicated setup. You can start using it with a local folder on your computer. Following are the steps to set up a registry in a computer's local folder.
+
+-   On your computer, create a folder, and let's call it LOCAL_REGISTRY. The screenshot below shows that the folder is created within the C drive.
+
+```{r 048, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image048.png")
+```
+[Click here to enlarge the image](images/image048.png)
+
+-   Start the SDMX Constructor.
+-   Click on the Registry button on the SDMX Constructor. It will open a pop-up window showing the default entries in the SDMX Registry tab.
+
+```{r 050, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image050.png")
+```
+[Click here to enlarge the image](images/image050.png)
+
+-   In the pop-up window, there are only two fields where we need to make changes: Registry Name and Base URL. You can click the 'New' button (which will clear the fields) or type directly within the fields.
+-   For Registry Name, please type the name of the folder we created before LOCAL_REGISTRY.
+-   For the Base URL, get the path of the folder (shown below).
+
+```{r 052, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image052.png")
+```
+[Click here to enlarge the image](images/image052.png)
+
+-   After entries in two fields, the pop-up window will look like this:
+
+```{r 054, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image054.png")
+```
+[Click here to enlarge the image](images/image054.png)
+
+-   Hit Save. It will generate a confirmation message, as shown below.
+
+```{r 056, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image056.png")
+```
+[Click here to enlarge the image](images/image056.png)
+
+-   Press OK to confirm. The pop-up windows will go away.
+-   To confirm if the folder is accessible from the tool, in the Editor Ribbon area, if you go to the 'Load from registry' option, you will see the LOCAL_REGISTRY in the dropdown options.
+
+```{r 058, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image058.png")
+```
+[Click here to enlarge the image](images/image058.png)
+
+-   The setup with a local folder is complete.
+
+## Preparing inputs {#preparing-inputs}
+
+To demonstrate the key functionalities of the SDMX Constructor, it is helpful to have a dummy dataset modelled appropriately.
+
+Imagine a country called Demoland and its National Statistical Office (NSO), Demoland NSO. Imagine the Demoland NSO is creating SDMX artefacts for its data in the following two tables.
+
+
+| Region            | 2015 | 2015 | 2015 | 2016 | 2016 | 2016 |
+|:-------------------|:---------:|:------------:|:-----------------:|:----------:|:------------:|:-----------------:|
+|                    | **Men**     | **Women**      | **Both Sexes**      | **Men**      | **Women**      | **Both Sexes**      |
+| Cities and Towns   | 14.4    | 20.7       | 17.6            | 14.4     | 21         | 17.2            |
+| Urban Villages     | 27.8    | 30.3       | 29.1            | 28.2     | 29.4       | 29.1            |
+| Rural Areas        | 26.2    | 29.6       | 28              | 26.2     | 29.5       | 27.1            |
+| Total              | 24      | 27.9       | 26              | 24       | 27.9       | 26              |
+
+: (#tab:table41) Unemployment Rate by sex and region
+
+
+
+| Age Group | Men    | Women  | Both Sexes |
+|:-----------|:--------:|:--------:|:------------:|
+| 15-24     | 130,088| 133,770| 263,856    |
+| 25-34     | 33,165 | 60,240 | 93,405     |
+| 35-44     | 21,970 | 38,944 | 60,914     |
+| 45-54     | 18,631 | 36,403 | 55,034     |
+| 55-64     | 26,821 | 44,010 | 70,831     |
+| 65+       | 45,323 | 78,725 | 124,048    |
+| Total     | 275,997| 392,092| 668,088    |
+
+: (#tab:table42) Population outside the labour force by sex and age group (2022)
+
+After modelling the data in both tables, we have the following ConceptScheme and Codelist arranged below. Note that the order of the columns in the following tables is per the SDMX Constructor’s bulk load default templates (ConceptScheme and Codelist).
+
+**ConceptScheme:**
+
+| Concept ID   | Concept Name       | Description                                                             | Codelist ID   |
+|:--------------|:--------------------|:------------------------------------------------------------------------|:---------------|
+| INDICATOR    | Indicator          | Refers to statistical measure describing a particular aspect of a social, economic or environmental phenomenon | CL_INDICATOR  |
+| UNIT_MEASURE | Unit of measure    | Unit in which the observation values are expressed                      | CL_UNIT_MEASURE |
+| SEX          | Sex                | State of being male or female                                           | CL_SEX         |
+| GEO          | Geographic area    | Refers to Urban or Rural locations                                      | CL_GEO         |
+| TIME_PERIOD  | Time period        | Timespan or point in time to which the observation refers                | CL_TIME_PERIOD |
+| FREQ         | Frequency          | Time interval at which observations occur over a given time period      | CL_FREQ        |
+| AGE          | Age groups         | Length of time that an entity has lived or existed                       | CL_AGE         |
+| OBS_VALUE    | Observation values | Refers to data or observation values                                    | CL_OBS_VALUE  |
+
+: (#tab:table43) ConceptScheme
+
+**Codelist:**
+
+| Codelist ID   | Concept Name       | Code ID | Code Name                                       |
+|:---------------|:--------------------|:---------|:------------------------------------------------|
+| CL_INDICATOR  | Indicator          | UNER    | Unemployment Rate                              |
+| CL_INDICATOR  | Indicator          | POLF    | Population outside the labour force            |
+| CL_UNIT_MEASURE | Unit of measure   | RT      | Rate                                           |
+| CL_UNIT_MEASURE | Unit of measure   | PS      | Persons                                        |
+| CL_SEX        | Sex                | M       | Men                                            |
+| CL_SEX        | Sex                | F       | Women                                          |
+| CL_SEX        | Sex                | _T      | Both Sexes (Total)                             |
+| CL_GEO        | Geographical area | M       | Cities and Towns (Metropolitan Area)            |
+| CL_GEO        | Geographical area | U       | Urban Villages                                 |
+| CL_GEO        | Geographical area | R       | Rural Areas                                    |
+| CL_GEO        | Geographical area | _T      | Total                                          |
+| CL_FREQ       | Frequency         | A       | Annual                                         |
+| CL_AGE        | Age groups        | 15T24   | 15-24                                          |
+| CL_AGE        | Age groups        | 25T34   | 25-34                                          |
+| CL_AGE        | Age groups        | 35T44   | 35-44                                          |
+| CL_AGE        | Age groups        | 45T54   | 45-54                                          |
+| CL_AGE        | Age groups        | 55T64   | 55-64                                          |
+| CL_AGE        | Age groups        | GE65    | 65+                                            |
+| CL_AGE        | Age groups        | _T      | Total                                          |
+
+: (#tab:table44) Codelist
+
+We will use these dummy datasets in this user manual to illustrate some critical functionalities of SDMX Constructor. 
+
+## Creating AgencyScheme {#creating-agencyscheme}
+
+In the context of SDMX, an AgencyScheme is a type of structural metadata that provides information about the organisations or agencies responsible for producing or disseminating data. It defines the different roles these organisations play and assigns unique identifiers to them, allowing them to be easily referenced and identified within the SDMX framework.
+
+The AgencyScheme is an important component of the SDMX infrastructure, as it enables data users to understand better the context of the data they are working with. It allows them to identify who produced the data, what their role was in the data production process, and where to go for more information.
+
+For example, an AgencyScheme may include information on national statistical organisations, international organisations, or other data-producing entities. Each organisation or agency would be assigned a unique identifier and given a defined role within the AgencyScheme. Using the AgencyScheme allows data users to easily navigate the complex world of data production and dissemination, ensuring that they are working with accurate and reliable information.
+
+To create an AgencyScheme, you can use the SDMX Constructor by following these steps:
+
+-	Start the SDMX Constructor, click the AgencyScheme button on top, and select the folder we created before, LOCAL_REGISTRY, from the AgencyScheme Editor’s ‘Load from registry’ dropdown option, as shown below.
+
+```{r 060, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image060.png")
+```
+[Click here to enlarge the image](images/image060.png)
+
+-	Create an AgencyScheme by entering the ID, AgencyID, Version and Name in the fields as shown below. For this exercise, we will have only Demoland NSO as an agency (all data are from Demoland NSO). We will do it in two stages. First, we will enter the properties for the AgencyScheme and then create the agency. 
+
+
+> **Note on IDs and versions**: All SDMX artefacts, have a unique identifier: In case of AgencySchme these are Agency ID, ID, and Version. Each artefact is assigned a specific version number to keep track of changes and avoid conflicts. This makes sure that the artefacts are managed efficiently and can be easily shared and reused by others while also giving users control over the artefacts they create.
+
+
+-	For ID, enter AGENCIES; For AgencyID, enter Demoland_NSO; for version, enter 1.0; and for the Name, enter Demoland NSO Agency Scheme as shown below.
+
+```{r 062, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image062.png")
+```
+[Click here to enlarge the image](images/image062.png)
+
+-	Now, we create the agency (as part of the AgencyScheme) by clicking on ‘Add New Agency’ as shown below.
+
+```{r 064, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image064.png")
+```
+[Click here to enlarge the image](images/image064.png)
+
+-	Clicking on ‘Add New Agency’ will open a pop-up window. We create the Demoland NSO agency by entering DEMOLAND_NSO in the ID and Demoland NSO in the Name field in the Add Agency pop-up and clicking Apply (as shown below).
+
+```{r 066, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image066.png")
+```
+[Click here to enlarge the image](images/image066.png)
+
+-	Once we finished creating the agency, it would look like the following (the agency will be in the AGENCY POOL).
+
+```{r 068, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image068.png")
+```
+[Click here to enlarge the image](images/image068.png)
+
+-	Move the agency from the AGENCY POOL to the AGENCY space on the right pane by selecting and dragging it. After the move, it would look like the following.
+
+```{r 070, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image070.png")
+```
+[Click here to enlarge the image](images/image070.png)
+
+-	Click the Export button highlighted below to save the agency scheme in the folder.
+
+```{r 072, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image072.png")
+```
+[Click here to enlarge the image](images/image072.png)
+
+-	As shown below, a pop-up window will open to confirm the saving location.
+
+```{r 074, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image074.png")
+```
+[Click here to enlarge the image](images/image074.png)
+
+-	Clicking on Save will prompt another message (“All files in this directory (path) with delete and merged into a single file (path) are you sure to continue?”), as shown below.
+
+```{r 076, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image076.png")
+```
+[Click here to enlarge the image](images/image076.png)
+
+-	Clicking on Yes will create and save an XML file in the folder we created before, as shown below.
+
+```{r 078, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image078.png")
+```
+[Click here to enlarge the image](images/image078.png)
+
+-	Opening the file (LocalRegistry.xml) will show the agency scheme, as shown in the image below. 
+
+```{r 080, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image080.png")
+```
+[Click here to enlarge the image](images/image080.png)
+
+
+## Creating ConceptScheme & Codelist {#creating-conceptscheme}
+
+In the context of SDMX, a ConceptScheme is a structured list of concepts used to define the dimensions and attributes of a dataset. When creating a data model, it's important to identify and define the key concepts that are relevant to the data being collected.
+
+One way to define these concepts is through the use of code lists, which are standardised lists of codes that classify objects based on a specific concept. For example, in a dataset on population demographics, the code list for the concept of sex might include codes such as Men, Women, and Both Sexes (Total). 
+
+To create Codelists and ConceptSchemes, you can use the SDMX Constructor by following these steps. First, upload the Code List and then the ConceptScheme. By completing these steps in sequence, you can create both artefacts in one go.
+
+**Create Codelist:**
+
+-	Click on the Codelist button on top and ensure that the folder we created before, LOCAL_REGISTRY, is selected from the Codelist Editor’s ‘Load from registry’ dropdown option, as shown below.
+
+```{r 082, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image082.png")
+```
+[Click here to enlarge the image](images/image082.png)
+
+-	Click on the Bulk load button as shown below.
+ 
+```{r 084, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image084.png")
+```
+[Click here to enlarge the image](images/image084.png)
+
+-	It will open up a pop-up window, as shown below.
+ 
+```{r 086, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image086.png")
+```
+[Click here to enlarge the image](images/image086.png)
+
+-	Copy the Codelist table (Table: \@ref(tab:table44)) we prepared before and paste its contents here. Before pasting, remember to click on the ID column (shown in white in the image below). Then, select the entire row (by clicking on the little arrow (pointing at the right) at the beginning of the rows).
+ 
+```{r 088, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image088.png")
+```
+[Click here to enlarge the image](images/image088.png)
+
+-	After pasting, remember to delete the header row. You can do this by selecting the entire row (by clicking again the little arrow pointing at the right at the beginning of the rows) and clicking the button (“-”) below, as indicated by a downward red arrow. 
+ 
+```{r 090, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image090.png")
+```
+[Click here to enlarge the image](images/image090.png)
+
+-	Enter the Agency ID and Version on the top row as DEMOLAND_NSO and 1.0, respectively, as shown below. If only the top row contains entries (DEMOLAND_NSO and 1.0) and the rest is empty, it implies that the Agency ID and Version are repeated for each row.
+ 
+```{r 092, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image092.png")
+```
+[Click here to enlarge the image](images/image092.png)
+
+-	Click on Load, as shown below.
+
+```{r 094, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image094.png")
+```
+[Click here to enlarge the image](images/image094.png)
+
+-	After the loading, this is how it would look (as shown below).
+
+```{r 096, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image096.png")
+```
+[Click here to enlarge the image](images/image096.png)
+
+-	Clicking on any item on this list will show the details on the right pane, as shown below.
+ 
+```{r 098, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image098.png")
+```
+[Click here to enlarge the image](images/image098.png)
+
+**Create ConceptScheme:**
+
+-	Click on the ConceptScheme button on top and ensure that the folder we created before, LOCAL_REGISTRY, is selected from the ConceptScheme Editor’s ‘Load from registry’ dropdown option, as shown below.
+ 
+```{r 100, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image100.png")
+```
+[Click here to enlarge the image](images/image100.png)
+
+-	Click on the Bulk load button, as shown below.
+ 
+```{r 102, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image102.png")
+```
+[Click here to enlarge the image](images/image102.png)
+
+-	It will open up a pop-up window, as shown below.
+ 
+```{r 104, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image104.png")
+```
+[Click here to enlarge the image](images/image104.png)
+
+-	Copy the ConceptScheme table (Table: \@ref(tab:table43)) we prepared before and paste its contents here. Before pasting, remember to click on the ID column and select the entire row (by clicking on the little arrow at the beginning of the rows).
+ 
+```{r 106, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image106.png")
+```
+[Click here to enlarge the image](images/image106.png)
+
+-	After pasting, remember to delete the header row by selecting the entire row and using the button (“-”) below, as indicated by a downward red arrow. 
+ 
+```{r 108, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image108.png")
+```
+[Click here to enlarge the image](images/image108.png)
+
+-	Click on Load, as shown below.
+
+```{r 110, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image110.png")
+```
+[Click here to enlarge the image](images/image110.png)
+
+-	After loading, the concepts will be visible in the CONCEPT POOL, as shown below.
+ 
+```{r 112, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image112.png")
+```
+[Click here to enlarge the image](images/image112.png)
+
+-	Move all the concepts from the CONCEPT POOL to the CONCEPT pane by selecting all (ctrl + a), then dragging and dropping. After the move, it would look like the following.
+ 
+```{r 114, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image114.png")
+```
+[Click here to enlarge the image](images/image114.png)
+
+-	After moving the concepts, enter the details: (ID: CS_DEMOLAND_NSO, AgencyID: DEMOLAND_NSO, Version: 1.0, and Name: Concept Scheme of Demoland NSO) for the ConceptScheme, as shown below.
+
+```{r 116, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image116.png")
+```
+[Click here to enlarge the image](images/image116.png)
+
+-	Then, click the ‘Save with descendants’ from the save option as shown below. This option, ‘Save with descendants, ’ will save the concept scheme with the codelist. 
+ 
+```{r 118, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image118.png")
+```
+[Click here to enlarge the image](images/image118.png)
+
+-	A pop-up message will ask to save the XML file in the folder (LOCAL_REGISTRY) we created before. Click on Save to save the file. 
+ 
+```{r 123, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image123.png")
+```
+[Click here to enlarge the image](images/image123.png)
+
+-	After clicking Save, the tool will ask the question to merge files. Select Yes. 
+ 
+```{r 125, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image125.png")
+```
+[Click here to enlarge the image](images/image125.png)
+
+-	A confirmation message will appear for a short time at the bottom right corner, as shown below.
+ 
+```{r 127, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image127.png")
+```
+[Click here to enlarge the image](images/image127.png)
+
+-	After that, if you go to the file’s location, you will see the XML file created, as shown below.
+ 
+```{r 129, echo=FALSE, fig.align="center", out.width="50%"}
+knitr::include_graphics("./images/image129.png")
+```
+[Click here to enlarge the image](images/image129.png)
+
+-	Opening the XML file will show the details containing, AgencyScheme, ConceptScheme and Codelists. 
+
+## Creating DSD, ContentConstraint and Dataflow  {#creating-dsd}
+
+In SDMX, a Data Structure Definition (DSD) is used to organise data in a specific format. Represented as a cube, a DSD is made up of dimensions and attributes. A Dataflow, on the other hand, represents a specific portion or filtered view of the cube that the DSD represents. A Content Constraint specifies the permitted code list and codes for a particular Dataflow. 
+
+In SDMX Constructor, the Table Modeller feature provides an intuitive user interface for designing statistical tables and generating the corresponding SDMX artefacts.
+
+Recalling our two initial tables (Table: \@ref(tab:table41) and Table: \@ref(tab:table42)), we will now generate DSDs, ContentConstraints and Dataflows. We can create all these artefacts through the [Table Modeller](#table-modeller) option in the SDMX Constructor.
+
+-	Click on the Table Modeller button on top and ensure that the folder we created before, LOCAL_REGISTRY, is selected from the Table Modeller Editor’s ‘Load from registry’ dropdown option, as shown below.
+ 
+
+```{r 130, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image130.png")
+```
+[Click here to enlarge the image](images/image130.png)
+
+-	You will notice the concept scheme we created before, as highlighted below. 
+ 
+```{r 132, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image132.png")
+```
+[Click here to enlarge the image](images/image132.png)
+
+-	Double-clicking the concept scheme will move it to the CONCEPT POOL, as shown below.
+ 
+```{r 134, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image134.png")
+```
+[Click here to enlarge the image](images/image134.png)
+
+-	Now, you can select the concepts in the CONCEPT POOL, then drag and drop them into various spaces (Constant Dimensions, Header, Side, Measures & Observation Attributes and Footnotes & Table Attributes) on the right pane. The logic driving where to drop each concept comes from our original tables (Table: \@ref(tab:table41) and Table: \@ref(tab:table42)).
+
+-	For Table \@ref(tab:table41) (Unemployment Rate by sex and region), the following distribution will be representative.
+ 
+```{r 136, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image136.png")
+```
+[Click here to enlarge the image](images/image136.png)
+
+-	We can now apply two constraints: one for the indicator’s name and the other for the unit of measure. The indicator’s name will be the Unemployment Rate, which we can select by double-clicking the moved indicator concept as shown below. 
+ 
+```{r 138, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image138.png")
+```
+[Click here to enlarge the image](images/image138.png)
+
+-	Another constraint would be the unit of measure. Because it is ‘rate’ (for Table \@ref(tab:table41)), double-clicking the moved unit of measure concept would offer the option to select the rate. Select the Rate as shown below. 
+ 
+```{r 140, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image140.png")
+```
+[Click here to enlarge the image](images/image140.png)
+
+-	Now we add the table information as shown below.
+ 
+```{r 142, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image142.png")
+```
+[Click here to enlarge the image](images/image142.png)
+
+-	Then we will hit save (select ‘Save without descendants’), as shown below. 
+ 
+```{r 144, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image144.png")
+```
+[Click here to enlarge the image](images/image144.png)
+
+-	After saving, it will show a message as shown below.
+ 
+```{r 146, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image146.png")
+```
+[Click here to enlarge the image](images/image146.png)
+
+-	Clicking on Continue will result in a pop-up asking to save the file, as shown below.
+ 
+```{r 152, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image152.png")
+```
+[Click here to enlarge the image](images/image152.png)
+
+-	Clicking Save will show this message and ask if the files should be merged.
+ 
+```{r 154, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image154.png")
+```
+[Click here to enlarge the image](images/image154.png)
+
+-	Clicking on Yes will merge the file. 
+-	We will repeat the process for Table \@ref(tab:table42) (Population outside the labour force by sex and age group (2022)). We can do that by moving Age to the ‘Side’ space (and removing the Geo back to the CONCEPT POOL), changing the constraints for the indicator to ‘Population outside the labour force’ and unit of measure to ‘Persons’, and updating the table information as shown below. 
+ 
+```{r 156, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image156.png")
+```
+[Click here to enlarge the image](images/image156.png)
+
+-	After hitting the save (Save without descendants) button, the message will read like the one below.
+ 
+```{r 158, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image158.png")
+```
+[Click here to enlarge the image](images/image158.png)
+
+-	Proceed with ‘Continue’, ‘Save’, and ‘Yes’ for merge.
+
+-	We should see two DSDs, two content constraints and two data flows. `Remember, dataflows are the filtered view of the DSDs.` 
+
+## Creating CategoryScheme {#creating-category}
+
+A CategoryScheme groups similar objects based on shared characteristics, providing a hierarchical structure that helps classify and organise data and metadata meaningfully.
+
+Referencing our two initial tables (Table: \@ref(tab:table41) and Table: \@ref(tab:table42)), we will create a CategoryScheme using the Table Modeller option in the SDMX Constructor. The categorisation could be by topics such as ‘Unemployment Rate’ and ‘Population outside the labour force’. 
+
+-	First, we will click the CategoryScheme button and enter the properties (ID: CAS_BY_TOPIC, AgencyID: DEMOLAND_NSO, Version: 1.0 and Name: Categorisation Scheme By Topic) as shown below.
+ 
+```{r 160, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image160.png")
+```
+[Click here to enlarge the image](images/image160.png)
+
+-	Click on “Add New Category”, as shown below.
+ 
+```{r 162, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image162.png")
+```
+[Click here to enlarge the image](images/image162.png)
+
+-	It will open a pop-up window, as shown below. Enter the details: ID: UNER (shorthand for Unemployment Rate) and Name: Unemployment Rate.
+ 
+```{r 164, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image164.png")
+```
+[Click here to enlarge the image](images/image164.png)
+
+-	Click on the Load “Dataflows” button, as shown below. 
+ 
+```{r 166, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image166.png")
+```
+[Click here to enlarge the image](images/image166.png)
+
+-	It will open another pop-up window to select the dataflow through the Registry.
+ 
+```{r 168, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image168.png")
+```
+[Click here to enlarge the image](images/image168.png)
+
+-	Select the Registry (LOCAL_REGISTRY), then the dataflow, and press Apply as shown below.
+ 
+```{r 170, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image170.png")
+```
+[Click here to enlarge the image](images/image170.png)
+
+-	A message will appear as shown below.
+ 
+```{r 172, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image172.png")
+```
+[Click here to enlarge the image](images/image172.png)
+
+-	Clicking the OK button will lead you to the following window.
+ 
+```{r 174, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image174.png")
+```
+[Click here to enlarge the image](images/image174.png)
+
+-	As shown below, move (dragging and dropping) the dataflow to the ‘attached dataflows’ space.
+ 
+```{r 176, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image176.png")
+```
+[Click here to enlarge the image](images/image176.png)
+
+-	Clicking “Apply” in that pop-up will take you to the following window, showing the entry into the CATEGORY POOL.
+ 
+```{r 178, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image178.png")
+```
+[Click here to enlarge the image](images/image178.png)
+
+-	Move it to the right pane, as shown below.
+ 
+```{r 180, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image180.png")
+```
+[Click here to enlarge the image](images/image180.png)
+
+-	Then hit Save (Save without descendants), and it will show the pop-up windows to ensure the location where it saves the file, as shown below.
+ 
+```{r 182, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image182.png")
+```
+[Click here to enlarge the image](images/image182.png)
+
+-	Clicking on Save will ask the confirmation to merge the file. Select Yes.
+-	Repeat the process for the other category, ‘Population outside the labour force’. The final view would be as follows:
+ 
+```{r 184, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image184.png")
+```
+[Click here to enlarge the image](images/image184.png)
+
+-	The XML file (by going to the location of the folder we created before and opening the XML file) would be like the one below.
+ 
+```{r 186, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image186.png")
+```
+[Click here to enlarge the image](images/image186.png)
+
+## Uploading XML file to the DLM {#uploading-xml}
+
+You can upload the XML file containing the SDMX artefacts to the .Stat Data Lifecycle Manager (DLM). The DLM could be on the cloud or local computer (Localhost). Here is one case illustrated where we upload the XML file we created and saved using the SDMX Constructor in a folder to a locally hosted instance of the DLM. 
+
+
+> **Note on artefact versioning**: Artefact versioning is crucial for managing SDMX artefacts, as it prevents conflicts when uploading structures to the DLM. This is especially important when multiple users work on the same artefact simultaneously or when updating artefacts over time. You may recall the usual place (in the right corner of the respective windows) to enter the version number in the user interface for creating or modifying artefacts in the SDMX Constructor.
+
+-	Start the DLM. Configured as localhost, it will look like the following. 
+ 
+```{r 188, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image188.png")
+```
+[Click here to enlarge the image](images/image188.png)
+
+-	Login using your credentials.
+ 
+```{r 190, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image190.png")
+```
+[Click here to enlarge the image](images/image190.png)
+
+-	Click on the ‘Upload structures’ button as shown below:
+ 
+```{r 192, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image192.png")
+```
+[Click here to enlarge the image](images/image192.png)
+
+-	Click on ‘Add files’ as shown below.
+ 
+```{r 194, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image194.png")
+```
+[Click here to enlarge the image](images/image194.png)
+
+-	Select the XML file we created before from the folder as shown below.
+ 
+```{r 196, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image196.png")
+```
+[Click here to enlarge the image](images/image196.png)
+
+-	After adding the file, select the ‘demo-design’ space, as shown below.
+ 
+```{r 198, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image198.png")
+```
+[Click here to enlarge the image](images/image198.png)
+
+-	Click upload as shown below.
+ 
+```{r 200, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image200.png")
+```
+[Click here to enlarge the image](images/image200.png)
+
+-	As shown below, the green background and the message will indicate the successful XML file upload.
+ 
+```{r 202, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image202.png")
+```
+[Click here to enlarge the image](images/image202.png)
+
+-	Clicking the Home icon will take you to the following interface.
+ 
+```{r 204, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image204.png")
+```
+[Click here to enlarge the image](images/image204.png)
+
+-	Here, selecting the options on the left navigation panel will show the artefacts on the main pane, as shown below.
+ 
+```{r 206, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image206.png")
+```
+[Click here to enlarge the image](images/image206.png)
+
+
+## Connecting to an SDMX registry {#connecting-to}
+
+SDMX Constructor can also connect to a new SDMX registry (such as .Stat DLM) directly, and users can directly pull or push (perhaps after editing) artefacts from the SDMX Constructor. 
+
+-	After launching the SDMX Constructor, click on the Registry, as shown below.
+ 
+```{r 208, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image208.png")
+```
+[Click here to enlarge the image](images/image208.png)
+
+-	The default value you can see is as follows.
+ 
+```{r 210, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image210.png")
+```
+[Click here to enlarge the image](images/image210.png)
+
+-	Change the default values for Registry Name and Base URL. For Registry Name, you can choose a name of your choice. For example, Registry Name is DLM, and for the Base URL, the localhost configuration is already specified (by default, it will be http://127.0.0.1/rest/). 
+ 
+```{r 212, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image212.png")
+```
+[Click here to enlarge the image](images/image212.png)
+
+-	Clicking on Save will show the message shown below. Click on OK.
+ 
+```{r 214, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image214.png")
+```
+[Click here to enlarge the image](images/image214.png)
+
+-	Once the Registry is set, select it from the ‘Load from registry’ option, as shown below. 
+ 
+```{r 216, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image216.png")
+```
+[Click here to enlarge the image](images/image216.png)
+
+Doing this syncs the artefacts. For instance, you can see the dataflows in SDMX Constructor populated from the DLM. However, pushing any new entry (in this case, let’s say, a new dataflow) to DLM would require the credentials for the DLM. 
+
+-	From the concepts obtained from the DLM, as shown below, let’s create a new data flow. 
+ 
+```{r 218, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image218.png")
+```
+[Click here to enlarge the image](images/image218.png)
+
+-	Move the concepts around and enter table details as shown below.
+ 
+```{r 220, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image220.png")
+```
+[Click here to enlarge the image](images/image220.png)
+
+-	Apply the content constraints as shown below.
+ 
+```{r 222, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image222.png")
+```
+[Click here to enlarge the image](images/image222.png)
+
+-	Then click on the Push to DLM button, as shown below.
+ 
+```{r 224, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image224.png")
+```
+[Click here to enlarge the image](images/image224.png)
+
+-	Select ‘Push without descendants’.
+ 
+```{r 226, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image226.png")
+```
+[Click here to enlarge the image](images/image226.png)
+
+-	After entering the credentials for the DLM, push, and you will see a message like the one below.
+ 
+```{r 228, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image228.png")
+```
+[Click here to enlarge the image](images/image228.png)
+
+-	After you have pressed the Continue button, you will see the following. The message mentions what has changed and what has not. In this case, it notes no DSD change, but one data flow and a content constraint have been created. 
+ 
+```{r 230, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image230.png")
+```
+[Click here to enlarge the image](images/image230.png)
+
+-	Click on OK and go to the DLM. In the DLM, clicking on the dataflow would show the additional dataflow added directly through the SDMX Constructor to the DLM, as shown below.  
+ 
+```{r 232, echo=FALSE, fig.align="center", out.width="100%"}
+knitr::include_graphics("./images/image232.png")
+```
+[Click here to enlarge the image](images/image232.png)
